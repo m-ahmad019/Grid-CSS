@@ -1,0 +1,76 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 55px 320px 210px 105px;
+  grid-template-areas:
+    "header menu menu"
+    "hero hero hero"
+    "main img side"
+    "banner banner banner";
+  gap: 5px;
+}
+
+
+header {
+  grid-area: header;
+  background: #111827;
+  color: white;
+}
+
+nav {
+  grid-area: menu;
+  background: #f1354b;
+  color: white;
+}
+
+.hero {
+  grid-area: hero;
+  background: steelblue;
+  color: white;
+}
+
+main {
+  grid-area: main;
+  background: #26374f;
+  color: white;
+}
+
+.image {
+  grid-area: side;
+  background: #bfe3e3;
+  height: 50%;
+}
+
+.extra {
+  background: #49b99b;
+  height: 50%;
+  grid-column: 3;
+  grid-row: 3;
+  align-self: end;
+}
+
+.banner {
+  grid-area: banner;
+  background: #ffd36b;
+}
+
+header,
+nav,
+.hero,
+main,
+.image,
+.extra,
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
